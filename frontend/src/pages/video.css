@@ -1,0 +1,117 @@
+.video{
+   background:
+    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15), transparent 30%),
+    linear-gradient(135deg, #0f172a, #111827, #020617);
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
+  position: fixed;
+  
+}
+.videopage{ 
+    width: 100%;
+    height: 100%;
+    position: fixed;padding:1rem;
+}
+.error{
+    border: 2px dotted black;
+    color: white;
+}
+
+.videomessage{
+display: grid;
+grid-template-columns: 8fr 4fr;
+width: 100%;
+height:90%;
+min-height: 0;
+min-width:0 ;
+position: fixed;
+
+    
+} 
+
+.realvideos{
+display: grid;
+justify-content: center;
+align-content: center;
+grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+grid-template-rows: repeat(minmax(0,1fr));
+width: 100%;
+height: 100%;
+
+}
+.realvideosx{
+display: grid;
+padding: 1rem;
+justify-content: center;
+align-content: center;
+grid-template-columns: repeat(auto-fit,minmax(0,1fr));
+grid-template-rows: repeat(minmax(0,1fr));
+width: 100%;
+justify-content: start;
+height: 100%;
+grid-column: 1/-1;
+
+}
+
+.localvid{
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+background-color: black;
+}
+
+.message{
+border: 4px solid rgb(111, 0, 128);
+background-color: blueviolet;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+}
+.messindex{
+    flex: 1;
+   min-height: 0;
+     overflow-y:auto;
+}
+.text{
+    background-color: rgb(90, 3, 102);
+  flex-shrink: 0;
+    
+}
+
+.messageremove{
+    display: none;
+}
+.options{
+  
+    background-color: blueviolet;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
+}
+
+.green{
+    background-color: green;
+}
+.gray{
+    background-color: gainsboro;
+}
+.red{
+    background-color: red;
+}
+.noshow{
+    display: none;
+}
+.show{
+    position: absolute;
+    top: -10px;
+    
+    background-color: rgb(92, 238, 92);
+    color: white;
+padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 50%;
+}

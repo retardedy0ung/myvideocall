@@ -1,0 +1,76 @@
+
+.user{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(7, 65, 96);
+    color: white;
+    font-weight: 800;
+    border-radius: 50%;
+    font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name{
+    color: white;
+}
+.home{
+width: 100vw;
+height: 100vh;
+background-color:cadetblue ;
+  overflow-x: hidden;
+
+
+}
+.loginregister{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.useraccount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+   align-items: start;
+    padding: 1rem;
+
+}
+.mycall{
+    color: rgb(5, 31, 74);
+    text-shadow: 5px 5px 5px rgb(8, 78, 127);
+    text-align: left;
+}
+.dot{
+    color: white;
+    font-size: xx-large;
+}
+
+.call{
+    border: 1px solid transparent;
+    background-color: rgb(3, 27, 59);
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+    color: white;
+  
+ 
+
+}
+.call:hover
+{
+    background-color: cadetblue;
+    color:  rgb(3, 27, 59) !important;
+outline: 5px solid  rgb(3, 27, 59);
+    cursor: pointer;
+}
+.link{
+   text-decoration: none;
+    color: white;   
+}
