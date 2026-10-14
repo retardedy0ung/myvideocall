@@ -16,7 +16,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name: Checking repository
-      uses: actions/checkout@4
+      uses: actions/checkout@v4
 
     - name: show project files
       run: ls -la
