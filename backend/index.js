@@ -5,7 +5,7 @@ import http from 'http'
 import mongoose from 'mongoose'
 import router from './src/Route/Route.js'
 import session from 'express-session'
-
+import 'dotenv/config'
 
 
 let app=express()
@@ -107,9 +107,9 @@ socket.on("disconnect",()=>{
 
 app.use("/api",router)
 
-server.listen("8000",()=>{
+server.listen(process.env.PORT,()=>{
     console.log("listening")
-    mongoose.connect("mongodb://thujo102:vikithujo@ac-xqahews-shard-00-00.hseirxi.mongodb.net:27017,ac-xqahews-shard-00-01.hseirxi.mongodb.net:27017,ac-xqahews-shard-00-02.hseirxi.mongodb.net:27017/?ssl=true&replicaSet=atlas-cus26v-shard-0&authSource=admin&appName=Cluster0").then(()=>{
+    mongoose.connect(process.env.MURL).then(()=>{
         console.log("dbconnected")
     })
 })
