@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 
 
-let serverurl="http://localhost:8000"
+let serverurl="https://myvideocall-r9jr.onrender.com"
 function Videopage() {
   let localvideo=useRef()
   let location=useLocation()
@@ -503,7 +503,7 @@ setmessage("")
 let checkmeetingcode=async()=>{
   console.log("checking code")
 try{
-let response=await axios.post("http://localhost:8000/api/addparticipant",{meetingcode:meetingcode,participant:participant},{withCredentials:true})
+let response=await axios.post("https://myvideocall-r9jr.onrender.com/api/addparticipant",{meetingcode:meetingcode,participant:participant},{withCredentials:true})
 console.log("room",response.data?.room)
 let roomjoin=response.data?.room
 console.log(roomjoin)
