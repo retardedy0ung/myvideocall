@@ -1,0 +1,27 @@
+# This is a basic workflow that is manually triggered
+
+name: myvideocall
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  push:
+     branches:
+       - main
+       - nodejs
+       - reactjs
+
+jobs:
+  job-1:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checking repository
+      uses: actions/checkout@v4
+
+    - name: show project files
+      run: ls -la
+      
+     
+            
+   
+          
