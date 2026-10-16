@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 
 
 
-let serverurl="http://localhost:8000"
+let serverurl="https://myvideocall-r9jr.onrender.com/"
 function Videopage() {
   let localvideo=useRef()
   let location=useLocation()
