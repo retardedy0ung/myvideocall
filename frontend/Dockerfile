@@ -3,7 +3,7 @@ WORKDIR /frontendapp
 COPY package*.json ./
 RUN npm install 
 COPY . .
-RUN npm install build
+RUN npm run build
 FROM nginx
 COPY --from=build /frontendapp/build /usr/share/nginx/html
 EXPOSE 80
