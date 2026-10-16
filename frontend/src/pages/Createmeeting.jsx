@@ -11,7 +11,7 @@ let location=useLocation()
     let create=async()=>{
         try{
           console.log("create",location.state?.creator)
-                    let response= await axios.post("https://myvideocall-1.onrender.com/api/create",{room:room,meetingcode:code,creator:location.state?.creator},{withCredentials:true})
+                    let response= await axios.post("https://myvideocall-r9jr.onrender.com/api/create",{room:room,meetingcode:code,creator:location.state?.creator},{withCredentials:true})
                     let newmeetingcode=response.data?.mymeetingcode
                     console.log("created",newmeetingcode)
 
