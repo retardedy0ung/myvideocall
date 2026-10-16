@@ -13,7 +13,7 @@ let navigate =useNavigate()
 
     let signup=async()=>{
         try{
-            let response=await axios.post("http://localhost:8000/api/register",{username:username,password:password},{withCredentials:true})
+            let response=await axios.post("https://myvideocall-r9jr.onrender.com/api/register",{username:username,password:password},{withCredentials:true})
     navigate("/",{state:{myname:response.data?.myname,message:response.data?.message,creator:response.data?.myid,loggedin:response.data?.logged}})
   console.log(response.data?.message)
 
