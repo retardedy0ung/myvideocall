@@ -26,8 +26,8 @@ console.log(error.response.data?.message)
     }
   return (
     <div className='registerpage'>
-        <div>
-            <h1>signup</h1>
+        <div className='registerouter'>
+            <h1 className='h1register'>signup</h1>
             <fieldset>
                 <legend>username</legend> <input type='text' name='username' onChange={(e)=>setusername(e.target.value)} value={username}/>
             </fieldset>

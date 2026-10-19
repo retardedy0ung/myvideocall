@@ -26,6 +26,7 @@ let location=useLocation()
     }
   return (
     <div>
+      <h1>enter the meeting name and create-meeting-code</h1>
       <div>
         <fieldset>
         <legend>room-name</legend>

@@ -9,3 +9,23 @@ font-weight: 800;
 
 
 }
+.h1register{
+    color: antiquewhite;
+}
+.registerpage{
+   overflow: hidden;
+   background-image: url('/public/profile.jpg'); 
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100vw;
+   height: 100vh;
+}
+.registerouter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+fieldset{
+    width: fit-content;
+}

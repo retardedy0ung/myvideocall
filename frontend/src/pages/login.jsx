@@ -1,7 +1,7 @@
 import axios from 'axios'
 import  { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-
+import './login.css'
 function Login() {
     let [password,setpassword]=useState("")
     let [username,setusername]=useState("")
@@ -29,8 +29,9 @@ console.log(error.response?.data?.message)
        
     }
   return (
-    <div>
-      <div>
+    <div className='loginouter'>
+      <div className='content'>
+        <h1 className='h1login'>Login</h1>
           <fieldset>
             <legend>username</legend>
             <input type='text' value={username} onChange={(e)=>setusername(e.target.value)}></input>
