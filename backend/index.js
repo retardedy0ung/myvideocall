@@ -6,6 +6,7 @@ import mongoose from 'mongoose'
 import router from './src/Route/Route.js'
 import session from 'express-session'
 import 'dotenv/config'
+import url from'url'
 
 
 let app=express()
@@ -21,6 +22,7 @@ app.use(session({
     saveUninitialized:false
 }))
 const server=http.createServer(app)
+
 const io= new Server(server,{
     cors:{
         origin:"https://myvideocall-1.onrender.com",
@@ -106,6 +108,7 @@ socket.on("disconnect",()=>{
 })
 
 app.use("/api",router)
+
 
 server.listen(process.env.PORT,()=>{
     console.log("listening")
