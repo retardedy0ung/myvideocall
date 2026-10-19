@@ -56,25 +56,36 @@ console.log(available?.password);
 }
 
 let createmeeting=async(req,res)=>{
-    let {room,meetingcode,creator}=req.body
-    let code=crypto.randomBytes(2).toString('hex').toUpperCase()
-      
+    try{
+ let {room,meetingcode,creator}=req.body
+     if (!room || !meetingcode || !creator) {
+      return res.status(400).json({
+        message: "Room, meeting code, and creator are required"
+      });
+    }
+   
+    let result= await registerdata.findById(creator) 
+     if (!result) {
+      return res.status(404).json({
+        message: "User is not registered"
+      });
+    }
+     let code=crypto.randomBytes(2).toString('hex').toUpperCase()
     let newcreator=new meetingdata({
         room:room,
         meetingcode:`${meetingcode}-${code}`,
         creator:creator
     })
-    let result= await registerdata.findById(creator)
-    if(result){
     let creatorname=result.username 
     await newcreator.save()
     console.log(newcreator)
     console.log(newcreator.meetingcode)
     return  res.status(200).json({mymeetingcode:newcreator.meetingcode,myname:creatorname})
+    }catch(e){
+        res.status(500).json({message:`failed to create meeting${e}`})
     }
-    else{
-          return  res.status(400).json({message:" u are not logged in "})
-    }
+   
+   
 }
 
 
