@@ -25,9 +25,10 @@ let location=useLocation()
 
     }
   return (
-    <div>
-      <h1>enter the meeting name and create-meeting-code</h1>
-      <div>
+    <div className='createmeetingouter'>
+      <h1 className='h1create'>enter the meeting name and create-meeting-code</h1>
+      <div className='thebuts'>
+   <div>
         <fieldset>
         <legend>room-name</legend>
         <input type='text' value={room} onChange={(e)=>setroom(e.target.value)}></input>
@@ -41,6 +42,8 @@ let location=useLocation()
             </fieldset>
       
       </div>
+      </div>
+   
       <div>
         <button onClick={create}>create</button>
       </div>

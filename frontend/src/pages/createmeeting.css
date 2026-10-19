@@ -1,0 +1,19 @@
+.createmeetingouter{
+     overflow: hidden;
+   background-image: url('/public/profile.jpg'); 
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+   width: 100vw;
+
+   height: 100vh;
+}
+.h1create{
+    color: antiquewhite;
+}
+.thebuts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

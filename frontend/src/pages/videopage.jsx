@@ -550,6 +550,9 @@ setcopied(false)
 {
   connects===false?
   <div>
+     {
+    set===true?<span>{getmeetingcode}<button onClick={handlecopy}>copy</button></span>:<></>
+ }
   <input type='text' value={meetingcode} onChange={(e)=>setmeetingcode(e.target.value)}></input><button  onClick={checkmeetingcode}>connect</button>
   {
   err?<><p className='error'>{err}</p></>:<></>
