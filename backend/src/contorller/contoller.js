@@ -66,13 +66,14 @@ let createmeeting=async(req,res)=>{
     }
    console.log("CREATOR RECEIVED:", creator);
 console.log("DATABASE:", mongoose.connection.name);
+
+    let creator=req.session.userId
     let result= await registerdata.findById(creator) 
      if (!result) {
       return res.status(404).json({
         message: "User is not registered"
       });
     }
-    let creator=req.session.userId
      let code=crypto.randomBytes(2).toString('hex').toUpperCase()
     let newcreator=new meetingdata({
         room:room,
