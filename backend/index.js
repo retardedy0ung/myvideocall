@@ -19,7 +19,12 @@ app.use(cors({
 app.use(session({
     secret:"mysecret",
     resave:true,
-    saveUninitialized:false
+    saveUninitialized:false,
+    cookie:{
+        httpOnly:true,
+        secure:true,
+        sameSite:"none"
+    }
 }))
 const server=http.createServer(app)
 

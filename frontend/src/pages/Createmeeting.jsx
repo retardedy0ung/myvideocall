@@ -20,6 +20,8 @@ let location=useLocation()
                     setcode("")
 
         }catch(e){
+             console.log("STATUS:", error.response?.status);
+    console.log("ERROR:", error.response?.data);
             console.log(e.response?.data?.message)
         }
 

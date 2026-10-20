@@ -57,7 +57,7 @@ console.log(available?.password);
 
 let createmeeting=async(req,res)=>{
     try{
- let {room,meetingcode,creator}=req.body
+ let {room,meetingcode}=req.body
      if (!room || !meetingcode || !creator) {
       return res.status(400).json({
         message: "Room, meeting code, and creator are required"
@@ -71,6 +71,7 @@ console.log("DATABASE:", mongoose.connection.name);
         message: "User is not registered"
       });
     }
+    let creator=req.session.userId
      let code=crypto.randomBytes(2).toString('hex').toUpperCase()
     let newcreator=new meetingdata({
         room:room,
