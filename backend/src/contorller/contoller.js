@@ -46,7 +46,7 @@ console.log(available?.password);
         if(correct){
             req.session.userId=available._id.toString()
             req.session.save((err)=>{
-                return res.status(500).json({message:`error not saved:${e}`})
+                return res.status(500).json({message:`error not saved:${err}`})
             })
             return res.status(200).json({message:"logged-in",myname:username,myid:req.session.userId,logged:true})
         }  else{
