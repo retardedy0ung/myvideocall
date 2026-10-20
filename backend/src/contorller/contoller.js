@@ -64,10 +64,11 @@ let createmeeting=async(req,res)=>{
         message: "Room, meeting code, and creator are required"
       });
     }
+        let creator=req.session.userId
    console.log("CREATOR RECEIVED:", creator);
 console.log("DATABASE:", mongoose.connection.name);
 
-    let creator=req.session.userId
+  
     let result= await registerdata.findById(creator) 
      if (!result) {
       return res.status(404).json({
