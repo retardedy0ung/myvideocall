@@ -59,7 +59,7 @@ console.log(available?.password);
 let createmeeting=async(req,res)=>{
     try{
  let {room,meetingcode}=req.body
-     if (!room || !meetingcode || !creator) {
+     if (!room || !meetingcode ) {
       return res.status(400).json({
         message: "Room, meeting code, and creator are required"
       });
