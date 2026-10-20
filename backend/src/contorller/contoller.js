@@ -66,7 +66,7 @@ let createmeeting=async(req,res)=>{
     }
         let creator=req.session.userId
    console.log("CREATOR RECEIVED:", creator);
-console.log("DATABASE:", mongoose.connection.name);
+
 
   
     let result= await registerdata.findById(creator) 
