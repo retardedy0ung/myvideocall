@@ -16,16 +16,19 @@ app.use(cors({
     origin:"https://myvideocall-1.onrender.com",
     credentials:true
 }))
+app.set("trust proxy", 1);
 app.use(session({
-    secret:process.env.SECRET_MY||"mysecret",
-    resave:true,
-    saveUninitialized:false,
-    cookie:{
-        httpOnly:true,
-        secure:true,
-        sameSite:"none"
+    name: "connect.sid",
+    secret: process.env.SESSION_SECRET||"mysecret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+        maxAge: 24 * 60 * 60 * 1000
     }
-}))
+}));
 const server=http.createServer(app)
 
 const io= new Server(server,{
